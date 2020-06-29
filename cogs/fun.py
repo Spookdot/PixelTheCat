@@ -43,6 +43,12 @@ class Fun(commands.Cog, name="Fun"):
     async def kiss(self, ctx, rp_person: TagNameConv):
         await ctx.send(f"Aww, kisees fwom {ctx.author.name} fow {rp_person}\n{await self.get_gif('kiss')}")
 
+    @commands.command(description="Applaud chur fwiends", aliases=["applause", "applaud"])
+    async def clap(self, ctx, rp_person: TagNameConv = ""):
+        await ctx.send(f"{ctx.author.display_name} put theiw paws togethaw "
+                       f"{f'fow {str(rp_person)} ' if rp_person != '' else ''}OwO"
+                       f"\n{await self.get_gif('clap')}")
+
     @commands.command(description="NYA!", aliases=["nyanya"])
     async def nya(self, ctx):
         await ctx.send(f"Nya!\n{await self.get_gif('nyan')}")
