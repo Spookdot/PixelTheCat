@@ -1,11 +1,12 @@
-import toml
+import yaml
 import discord
 from cogs.fun import Fun
 from cogs.event import Event
 from cogs.admin import Admin
+from cogs.ImagineManim import ImagineManim
 from discord.ext import commands
 
-cfg = toml.load("config.toml")
+cfg = yaml.load(open("config.yaml", "r"))
 bot = commands.Bot(command_prefix="!mew ", owner_id="475316891028815873", case_insensitive=True)
 bot.remove_command("help")
 
@@ -34,4 +35,5 @@ async def help(ctx):
 bot.add_cog(Admin(bot))
 bot.add_cog(Fun(bot))
 bot.add_cog(Event(bot))
+bot.add_cog(ImagineManim(bot))
 bot.run(cfg["Bot"]["token"])
