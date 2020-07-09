@@ -2,15 +2,21 @@ Bot:
 Memes:
   approach:
     image: "cogs/meme/Approaching.png"
-    user1: !!python/tuple [600, 800]
-    user1_resize: !!python/tuple [250, 250]
-    user2: !!python/tuple [400, 10]
-    user2_resize: !!python/tuple [250, 250]
+    user1_box: [600, 800, 850, 1050]
+    user1_align: "center-center"
+    user2_box: [400, 10, 650, 260]
+    user2_align: "center-center"
   beautiful:
     image: "cogs/meme/Beautiful.png"
-    user1: !!python/tuple [60, 840]
-    user1_resize: !!python/tuple [220, 220]
-    user2: !!python/tuple [480, 855]
-    user2_resize: !!python/tuple [220, 220]
-    user3: !!python/tuple [150, 300]
-    user3_resize: !!python/tuple [500, 500]
+    user1_box: [60, 840, 280, 1060]
+    user1_align: "center-center"
+    user2_box: [480, 855, 700, 1075]
+    user2_align: "center-center"
+    user3_box: [0, 300, 650, 800]
+    user3_align: "lower-left"
+  trump:
+    image: "cogs/meme/Trump.png"
+    user1_box: [390, 1000, 570, 1200]
+    user1_align: "center-center"
+    user2_box: [0, 0, 959, 959]
+    user2_align: "lower-center"
